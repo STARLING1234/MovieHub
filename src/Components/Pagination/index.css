@@ -1,0 +1,77 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 20px 0;
+  width: 100%;
+}
+
+.pagination-container {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+  align-items: center;
+  user-select: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination-container .page-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-container .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--card-bg);
+  border: 1px solid var(--sidebar-border);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-container .page-item:hover:not(.disabled):not(.active) .page-link {
+  background-color: var(--toggle-btn-hover);
+  border-color: #e50914;
+  color: #e50914;
+  transform: translateY(-2px);
+}
+
+.pagination-container .page-item.active .page-link {
+  background-color: #e50914;
+  border-color: #e50914;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.3);
+}
+
+.pagination-container .page-item.disabled .page-link {
+  color: #666666;
+  background-color: var(--sidebar-border);
+  border-color: var(--sidebar-border);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination-container .prev-item .page-link,
+.pagination-container .next-item .page-link {
+  font-weight: 600;
+}
+
+.pagination-container .break-item .page-link {
+  cursor: default;
+  background: transparent;
+  border-color: transparent;
+}

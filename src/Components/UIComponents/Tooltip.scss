@@ -1,0 +1,44 @@
+.custom-tooltip {
+  position: absolute;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: tooltip-fade-in 0.15s ease-out forwards;
+
+  &.tooltip-top {
+    transform: translate(-50%, -100%);
+  }
+
+  &.tooltip-bottom {
+    transform: translate(-50%, 0);
+  }
+
+  &.tooltip-left {
+    transform: translate(-100%, -50%);
+  }
+
+  &.tooltip-right {
+    transform: translate(0, -50%);
+  }
+}
+
+.tooltip-trigger-wrapper {
+  cursor: pointer;
+}
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
